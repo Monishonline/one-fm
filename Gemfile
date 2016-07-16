@@ -27,6 +27,10 @@ gem 'coffee-script-source', '1.8.0'
 
 gem 'paperclip', '~> 4.2', '>= 4.2.1'
 
+gem 'carrierwave'
+
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
 group :development, :test do
 
   gem 'byebug'

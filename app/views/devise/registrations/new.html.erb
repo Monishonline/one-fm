@@ -7,7 +7,7 @@
 
     
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true })do |f| %>
       <%= devise_error_messages! %>
 
        <div class="field">
@@ -21,9 +21,9 @@
       </div>
 
        <div class="field">
-    <%= f.label :thumbnail %><br />
-    <%= f.file_field :thumbnail%>
-  </div>
+          <%= f.label :thumbnail %><br />
+          <%= f.file_field :thumbnail %>
+        </div>
 
       <div class="field">
         <%= f.label :password %>

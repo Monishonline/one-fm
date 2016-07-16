@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160716041044) do
+ActiveRecord::Schema.define(version: 20160716150825) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "title"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160716041044) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.string   "thumbnail"
   end
 
   add_index "podcasts", ["email"], name: "index_podcasts_on_email", unique: true
