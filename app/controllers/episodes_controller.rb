@@ -47,7 +47,7 @@ before_action :find_episodes, only: [:show, :edit, :update, :destroy]
 	private
 
 	def episode_params
-		params.require(:episode).permit(:title, :description)
+		params.require(:episode).permit(:title, :description, :avatar)
 	end
 
 	def find_podcast

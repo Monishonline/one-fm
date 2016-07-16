@@ -31,6 +31,11 @@ gem 'carrierwave'
 
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
+
+gem 'cloudinary'
+
+
+
 group :development, :test do
 
   gem 'byebug'
