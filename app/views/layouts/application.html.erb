@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OneFm</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+ <% if alert %>
+  <p class="alert"><%= alert %></p>
+ <% elsif  notice %>  
+      <p class="notice"><%= notice %></p>
+        <% end %>
+<header id="main_header" class="cf">
+	<div class="wrapper_wide">
+	<%= link_to "Podcast.fm", root_path, id: "logo" %>
+		<nav>
+			<ul>
+				<% unless podcast_signed_in? %>
+					<li><%= link_to "Explore", podcasts_path %></li>
+					<li><%= link_to "Sign In", new_podcast_session_path  %></li>
+					<li><%= link_to "Create new", new_podcast_registration_path %></li>
+					<% else %>
+
+					<li><%= link_to "Explore", podcasts_path %></li>
+					<li><%= link_to "Dashboard", root_path %></li>
+					<li><%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
+					<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>
+<%= yield %>
+
+</body>
+</html>

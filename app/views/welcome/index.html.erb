@@ -1,0 +1,22 @@
+<div id="background">
+<header class="cf">
+	<div class="wrapper_wide">
+		<a href="#" id="logo">ONE.fm</a>
+		<nav>
+			<ul>
+			<li><%= link_to "Explore", podcasts_path %></li>
+					<li><%= link_to "Sign In", new_podcast_session_path  %></li>
+					<li><%= link_to "Create new", new_podcast_registration_path %></li>
+			
+			</ul>
+		</nav>
+	</div>
+</header>
+<div class="wrapper_skinny">
+	<h1>Discover your new favorite<br> podcast, or create your own.</h1>
+	<%= link_to "Create new", new_podcast_registration_path, class: "button button_highlight" %>
+	
+	<%= link_to "Explore", podcasts_path, class:"button button_white" %>
+</div>
+
+</div>
